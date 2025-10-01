@@ -17,7 +17,7 @@ import json
 import yaml
 import datetime
 import logging
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Any
 from dataclasses import dataclass, asdict
 from pathlib import Path
 import numpy as np
@@ -25,6 +25,7 @@ import numpy as np
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
 
 @dataclass
 class DimensionScore:
@@ -35,6 +36,7 @@ class DimensionScore:
     weighted_score: float
     audit_points: List[Dict[str, Any]]
     validation_status: str
+
 
 @dataclass
 class AGIAEFResult:
@@ -49,6 +51,7 @@ class AGIAEFResult:
     audit_status: str
     recommendations: List[str]
     next_assessment_due: str
+
 
 class AGIAEFAssessment:
     """Main assessment engine for AGI-AEF evaluation"""
@@ -361,6 +364,7 @@ class AGIAEFAssessment:
 
         logger.info(f"Results exported to: {output_path}")
 
+
 def main():
     """Main CLI interface"""
     parser = argparse.ArgumentParser(description="AGI Autonomy Evaluation Framework Assessment Tool")
@@ -388,26 +392,27 @@ def main():
 
     # Print summary
     print(f"\n{'='*60}")
-    print(f"AGI-AEF Assessment Summary")
+    print("AGI-AEF Assessment Summary")
     print(f"{'='*60}")
     print(f"System: {result.system_name}")
     print(f"AGI-AEF Score: {result.composite_score}/255")
     print(f"Classification: {result.level_classification}")
     print(f"Audit Status: {result.audit_status}")
     print(f"Assessment Date: {result.assessment_date}")
-    print(f"\nTop Dimension Scores:")
+    print("\nTop Dimension Scores:")
 
     sorted_dimensions = sorted(result.dimension_scores.items(), key=lambda x: x[1], reverse=True)
     for dimension, score in sorted_dimensions[:5]:
         print(f"  {dimension.replace('_', ' ').title()}: {score:.1f}%")
 
     if result.recommendations:
-        print(f"\nRecommendations:")
+        print("\nRecommendations:")
         for rec in result.recommendations:
-            print(f"  • {rec}")
+            print(f"  {rec}")
 
     print(f"\nDetailed results saved to: {output_path}")
     print(f"Next assessment due: {result.next_assessment_due}")
+
 
 if __name__ == "__main__":
     main()
