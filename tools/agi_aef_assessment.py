@@ -17,7 +17,7 @@ import json
 import yaml
 import datetime
 import logging
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 from dataclasses import dataclass, asdict
 from pathlib import Path
 import numpy as np
@@ -85,12 +85,12 @@ class AGIAEFAssessment:
         (255, 255): "MAXIMUM THEORETICAL"
     }
 
-    def __init__(self, config_path: str = None):
+    def __init__(self, config_path: Optional[str] = None):
         """Initialize assessment engine with configuration"""
         self.config = self._load_config(config_path)
         self.assessment_tests = self._load_assessment_tests()
 
-    def _load_config(self, config_path: str) -> Dict:
+    def _load_config(self, config_path: Optional[str]) -> Dict:
         """Load assessment configuration"""
         if config_path and Path(config_path).exists():
             with open(config_path, 'r') as f:
