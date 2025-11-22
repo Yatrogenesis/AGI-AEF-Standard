@@ -1,0 +1,95 @@
+[package]
+name = "agi-aef-rust"
+version = "1.0.0"
+edition = "2021"
+authors = ["AGI-AEF Contributors"]
+description = "Rust implementation of the AGI Alignment and Ethics Framework with comprehensive monitoring and regulatory compliance"
+license = "MIT"
+repository = "https://github.com/Yatrogenesis/AGI-AEF-Standard"
+keywords = ["agi", "ethics", "alignment", "safety", "evaluation"]
+categories = ["science", "web-programming::http-server"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+
+# Web framework and API
+actix-web = "4.4"
+actix-cors = "0.7"
+actix-rt = "2.9"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+
+# Configuration
+config = "0.13"
+dotenv = "0.15"
+
+# Logging and tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tracing-actix-web = "0.7"
+
+# Monitoring and metrics
+prometheus = "0.13"
+opentelemetry = { version = "0.21", features = ["metrics", "trace"] }
+opentelemetry-prometheus = "0.14"
+opentelemetry-otlp = "0.14"
+
+# Security
+jsonwebtoken = "9.2"
+bcrypt = "0.15"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+
+# Rate limiting
+governor = "0.6"
+
+# Database (for audit trail and history)
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres", "uuid", "chrono", "json"] }
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Mathematical operations
+ndarray = "0.15"
+statrs = "0.16"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# CLI
+clap = { version = "4.4", features = ["derive", "color", "env"] }
+colored = "2.1"
+indicatif = "0.17"
+
+# HTTP client (for regulatory API integrations)
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+
+# Validation
+validator = { version = "0.16", features = ["derive"] }
+
+# Templating for reports
+tera = "1.19"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+proptest = "1.4"
+mockall = "0.12"
+wiremock = "0.6"
+
+[[bench]]
+name = "assessment_benchmark"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
+[profile.bench]
+inherits = "release"
