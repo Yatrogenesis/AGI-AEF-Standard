@@ -2,9 +2,13 @@
 
 ## The Universal Standard for AGI Assessment and Benchmarking
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17680737.svg)](https://doi.org/10.5281/zenodo.17680737)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/AGI-AEF/AGI-AEF-Standard/releases)
-[![Standard](https://img.shields.io/badge/standard-Open-green.svg)](https://agi-aef.org)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Yatrogenesis/AGI-AEF-Standard/releases)
+[![Tests](https://github.com/Yatrogenesis/AGI-AEF-Standard/actions/workflows/tests.yml/badge.svg)](https://github.com/Yatrogenesis/AGI-AEF-Standard/actions/workflows/tests.yml)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/Yatrogenesis/AGI-AEF-Standard)
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Standard](https://img.shields.io/badge/standard-Open-green.svg)](https://github.com/Yatrogenesis/AGI-AEF-Standard)
 
 > **A comprehensive, standardized methodology for assessing the autonomy levels of Artificial General Intelligence systems with unprecedented 256-level granularity (0-255).**
 

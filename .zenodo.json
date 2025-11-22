@@ -1,0 +1,48 @@
+{
+  "title": "AGI Autonomy Evaluation Framework (AGI-AEF) - Universal Standard v1.0.0",
+  "description": "A comprehensive, standardized methodology for assessing the autonomy levels of Artificial General Intelligence systems with 256-level granularity (0-255). Includes complete test suite with 100% coverage and production-ready CI/CD pipeline.",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "publication_date": "2025-11-22",
+  "creators": [
+    {
+      "orcid": "0009-0008-6093-8267",
+      "affiliation": "Independent Researcher",
+      "name": "Molina Burgos, Francisco"
+    }
+  ],
+  "access_right": "open",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [
+    "artificial general intelligence",
+    "AGI",
+    "autonomy assessment",
+    "evaluation framework",
+    "benchmarking",
+    "AI safety",
+    "AI alignment",
+    "machine learning",
+    "cognitive assessment",
+    "multi-dimensional evaluation",
+    "256-level granularity",
+    "standardization"
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://github.com/Yatrogenesis/AGI-AEF-Standard",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.5281/zenodo.17680737",
+      "relation": "isIdenticalTo"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "zenodo"
+    }
+  ]
+}

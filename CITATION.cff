@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this framework or assessment tool, please cite it as below."
+type: software
+title: "AGI Autonomy Evaluation Framework (AGI-AEF)"
+version: 1.0.0
+doi: 10.5281/zenodo.17680737
+date-released: "2025-11-22"
+url: "https://github.com/Yatrogenesis/AGI-AEF-Standard"
+repository-code: "https://github.com/Yatrogenesis/AGI-AEF-Standard"
+license: CC-BY-SA-4.0
+authors:
+  - family-names: "Molina Burgos"
+    given-names: "Francisco"
+    email: "pako.molina@gmail.com"
+    orcid: "https://orcid.org/0009-0008-6093-8267"
+    affiliation: "Independent Researcher"
+keywords:
+  - artificial general intelligence
+  - AGI
+  - autonomy assessment
+  - evaluation framework
+  - benchmarking
+  - AI safety
+  - AI alignment
+  - machine learning
+  - cognitive assessment
+  - multi-dimensional evaluation
+  - 256-level granularity
+  - standardization
+abstract: >
+  The AGI Autonomy Evaluation Framework (AGI-AEF) provides a comprehensive,
+  standardized methodology for assessing the autonomy levels of Artificial
+  General Intelligence systems with unprecedented 256-level granularity (0-255).
+
+  The framework evaluates AGI systems across 12 core capability dimensions:
+  Perception & Sensory Processing, Learning & Adaptation, Reasoning & Problem
+  Solving, Planning & Strategy, Communication & Language, Social Interaction,
+  Emotional Intelligence, Safety & Alignment, Resource Management, Autonomy &
+  Decision Making, Creativity & Innovation, and Meta-Cognition.
+
+  Each dimension is assessed through standardized tests with weighted scoring,
+  resulting in a composite score that maps to 9 classification levels from
+  NASCENT (0-28) to MAXIMUM THEORETICAL (225-255). The framework includes
+  automated audit status determination (CERTIFIED, CONDITIONAL, REQUIRES_IMPROVEMENT)
+  and generates prioritized recommendations for system improvement.
+
+  Version 1.0.0 includes a complete test suite (136 tests, 100% code coverage)
+  and production-ready CI/CD pipeline with multi-platform support.
